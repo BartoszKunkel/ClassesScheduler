@@ -27,16 +27,18 @@ Instructions to launch the application:
 
 
 ## Login panel
-![Screenshot of login panel](https://mega.nz/file/B6B2TLTZ#KefzUfkLr8IhPgsFAt_nFUpY4Se74DJaytspOIYthSs)
+![Screenshot of login panel](https://imgur.com/GYAOH7A)
 
 ## Main page
-![Screenshot of main page](https://mega.nz/file/1iwjkCTJ#fX8Hmi6_QNCHb9PFXf8U99YfaFHOzsND31xFjtl_7RE)
+![Screenshot of main page](https://imgur.com/TRdYTpv)
 
 ## Main page with schedule
-![Screenshot of main page after filtering desire schedule](https://mega.nz/file/JvwxmTDb#7a3MB3g411U564x2KQcU3XZPZKEFIMh3P62mKsElV70)
+![Screenshot of main page after filtering desire schedule](https://imgur.com/seSWmfm)
 
 ## Menu
-![Screenshot of slide bar menu](https://mega.nz/file/wyAG1KTR#orVCc5OO_6XyGLhsG3f3Ipku85Z6IyJHTEWcCe4wykU)
+![Screenshot of slide bar menu](https://imgur.com/D2kbc4b)
 
 ## Data editing page
-![Screenshot of data editing page with some of records](https://mega.nz/file/924QSC4B#bFIQkAckVaBfIXfV2Hq9Ek4nRBHP9-hNyhEtVFrSRjc)"# ClassesScheduler" 
+![Screenshot of data editing page with some of records](https://imgur.com/kWf5IhK)
+
+"# ClassesScheduler" 
