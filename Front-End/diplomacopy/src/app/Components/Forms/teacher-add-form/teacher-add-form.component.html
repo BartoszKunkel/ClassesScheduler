@@ -1,0 +1,16 @@
+
+<form [formGroup]="teachersForm">
+    <div class="mb-3">
+        <label  class="form-label">Imie</label>
+        <input  class="form-control" formControlName="name" ngbTooltip="Podaj znak lub łańcuch znaków określający imię. Na przykład Adam." >
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Nazwisko</label>
+        <input  class="form-control" formControlName="surname" ngbTooltip="Podaj znak lub łańcuch znaków określający nazwisko. Na przykład Kowalski." >
+      </div>
+      <label>Wykształcenie prowadzącego</label>
+      <app-dropdown-list name="a_degree" [data]="degree_table" (onChoose)="getDegree($event)" ngbToolTip="Wybierz wykształcenie prowadzącego"></app-dropdown-list>
+      <button (click)="submit()" type="button" class="btn btn-primary">Wyślij</button>
+      
+</form>
+<app-alert #alertRef></app-alert>

@@ -1,0 +1,10 @@
+<app-huge-dropdown [label]="'Dodaj przedmiot'">
+    <app-subject-add-form/>
+</app-huge-dropdown>
+
+<app-table (currentActionID)="this.actionID = $event" [tableConfig]="tableConfig"></app-table>
+
+<app-modal [headerLabel]="'Usunięcie przedmiotu'" [modalName]="'delete_subject'" [rightButton]="modalRightButton"
+           [size]="'xs'">
+    <p>Jesteś pewien, ze chcesz usunąć ten przedmiot?</p>
+</app-modal>

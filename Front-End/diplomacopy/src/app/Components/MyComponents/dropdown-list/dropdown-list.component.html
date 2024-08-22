@@ -1,0 +1,30 @@
+
+<div class="dropdown">
+    <label *ngIf="label" class="dropdown__label" for="dropdown">{{ label }}</label>
+
+    <div class="dropdown__split">
+        <i class="bi bi-search dropdown__icon"></i>
+        <input (keyup)="onKey($event)" [value]="inputValue" autocomplete="off" class="dropdown__input" id="dropdown"
+               id="dropInput"
+               name="dropdown" placeholder="Szukaj..." type="text">
+
+        <button (click)="toggleDropDown()" *ngIf="!inputValue" class="dropdown__button">
+            <i *ngIf="!isOpen" class="bi bi-chevron-down"></i>
+            <i *ngIf="isOpen" class="bi bi-chevron-up"></i>
+        </button>
+
+        <button (click)="clearFields()" *ngIf="inputValue" class="dropdown__button">
+            <i class="bi bi-x-circle clear"></i>
+        </button>
+
+    </div>
+
+    <div [ngClass]="{'show': isOpen, 'hide': !isOpen}" class="dropdown__content">
+        <ul>
+            <li *ngFor="let d of dataCopy; let i = index; trackBy: trackByFn" class="dropdown__item"
+                id="dropdown-content">
+                <a (click)="fillAndSend(d.id, d.content)">{{ d.content }}</a>
+            </li>
+        </ul>
+    </div>
+</div>

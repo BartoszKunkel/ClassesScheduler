@@ -1,0 +1,50 @@
+<app-huge-dropdown [label]="'Filtry'">
+    <div class="list">
+        <div class="list__elements">
+            <div id="studyMode">
+                <app-dropdown-list (onChoose)="setData($event, -1)" [clear]='cl[0]' [data]="study_mode_table"
+                                   [label]="'Tryb'"
+                                   [type]='0'></app-dropdown-list>
+            </div>
+
+            <div id="degreeLevel">
+                <app-dropdown-list (onChoose)="setData($event, 0)" [clear]='cl[1]' [data]="lvl_degree_table"
+                                   [label]="'Stopień'"
+                                   [type]='0'></app-dropdown-list>
+            </div>
+
+            <div id="name">
+                <app-dropdown-list (onChoose)="setData($event, 1)" [clear]='cl[2]' [data]="name_table"
+                                   [label]="'Kierunek'"></app-dropdown-list>
+            </div>
+
+            <div id="specialization">
+                <app-dropdown-list (onChoose)="setData($event, 2)" [clear]='cl[3]' [data]="specialization_table"
+                                   [label]="'Specializacja'"></app-dropdown-list>
+            </div>
+
+            <div id="semester">
+                <app-dropdown-list (onChoose)="setData($event, 3)" [clear]='cl[4]' [data]="study_year_table"
+                                   [label]="'Semestr'"></app-dropdown-list>
+            </div>
+
+            <div id="practiceGroup">
+                <app-dropdown-list (onChoose)="setData($event, 4)" [clear]='cl[5]' [data]="practice_group_table"
+                                   [label]="'Grupa ćwiczeniowa'"></app-dropdown-list>
+            </div>
+
+            <div id="labGroup">
+                <app-dropdown-list (onChoose)="setData($event, 5)" [clear]='cl[6]' [data]="lab_group_table"
+                                   [label]="'Grupa Laboratoryjna'"></app-dropdown-list>
+            </div>
+        </div>
+
+        <button (click)="find()" class="btn btn-primary" type="button">Szukaj</button>
+    </div>
+
+           <app-alert #alertRef></app-alert>
+    <!--<app-modal [modalName]="'test'" [size]="'sm'" headerLabel="My Modal">-->
+    <!--    <app-classes-reservation></app-classes-reservation>-->
+    <!--</app-modal>-->
+
+</app-huge-dropdown>

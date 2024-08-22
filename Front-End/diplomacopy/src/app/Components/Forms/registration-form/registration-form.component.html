@@ -1,0 +1,24 @@
+<form [formGroup]="registrationForm">
+    <div class="mb-3">
+        <label  class="form-label">Imie</label>
+        <input  class="form-control" formControlName="firstName" ngbTooltip="Podaj imię użytkownika" >
+
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nazwisko</label>
+        <input  class="form-control" formControlName="lastName" ngbTooltip='Podaj nazwisko użytkownika'>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Login</label>
+        <input  class="form-control" formControlName="login" ngbTooltip="Podaj login użytkownika">
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Hasło</label>
+        <input  class="form-control" formControlName="password" ngbTooltip="Podaj hasło użytkownika">
+      </div>
+      <app-dropdown-list [type]="0" name="accesslvl" [data]="access_table" (onChoose)="getDegree($event)" ngbToolTip="Wybierz wykształcenie prowadzącego"></app-dropdown-list>
+      
+      <button (click)="submit()" type="button" class="btn btn-primary">Wyślij</button>
+    
+      <app-alert #alertRef></app-alert>
+</form>

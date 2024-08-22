@@ -1,0 +1,10 @@
+<app-huge-dropdown [label]="'Dodaj Zajęcia'">
+    <app-classes-reservation></app-classes-reservation>
+</app-huge-dropdown>
+
+<app-table (currentActionID)="this.actionID = $event" [tableConfig]="tableConfig"></app-table>
+
+<app-modal [headerLabel]="'Usunięcie zajęć'" [modalName]="'delete_classes'" [rightButton]="modalRightButton"
+           [size]="'xs'">
+    <p>Jesteś pewien, ze chcesz usunąć te zajęcia?</p>
+</app-modal>

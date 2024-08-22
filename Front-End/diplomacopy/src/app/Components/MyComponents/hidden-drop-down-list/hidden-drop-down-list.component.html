@@ -1,0 +1,14 @@
+<div class = "dropdown">
+    <button (click)="showDropDown()" class="dropbtn">Show</button>
+    <div id="myDropdown" class="dropdown-content">
+        <form>
+            <input [value]="inputValue" id="input" type="text" placeholder="Szukaj..." id="dropInput" (keyup)="onKey($event)" matInput>
+        </form>
+
+        <ul>
+            <li *ngFor = "let d of data; let i = index; trackBy: trackByFn" id = "dropdown-content">
+                <a (click)="fill(d.id, d.content)">{{d.id}}: {{d.content}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

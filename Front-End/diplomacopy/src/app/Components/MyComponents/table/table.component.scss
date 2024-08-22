@@ -1,0 +1,66 @@
+@import '../../../Layout/colors';
+
+.table-container {
+  margin: 0 auto;
+  max-width: 99%;
+  overflow-x: auto;
+}
+
+.table {
+  th {
+    min-width: 30px;
+    pointer-events: none;
+    cursor: unset;
+
+    &:first-of-type {
+      min-width: 40px;
+    }
+
+    &:not(:first-of-type):not(:last-of-type) {
+      min-width: 200px;
+    }
+  }
+
+  tr:hover {
+    td {
+      border-bottom: 1px solid $gray900;
+    }
+  }
+
+  tr:nth-child(odd) {
+    td {
+      background-color: $gray100;
+    }
+  }
+
+  td {
+    font-weight: 500;
+  }
+
+  .action {
+    width: 30px;
+
+    .dropdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+
+      button {
+        width: 30px;
+        height: 30px;
+        background: none;
+        border: none;
+
+        &:hover {
+          background-color: $gray200;
+        }
+      }
+    }
+  }
+
+  caption {
+    font-weight: bold;
+  }
+}

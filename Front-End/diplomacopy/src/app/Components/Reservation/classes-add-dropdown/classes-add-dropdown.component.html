@@ -1,0 +1,26 @@
+<div class="list">
+    <div class="list__elements">
+<div class = 'content'>
+    <div disabled class = 'filterBar'>
+       
+        <div class="form-group">
+        <label  class="form-label">Pokój</label>
+        <app-dropdown-list [classesUpdateData]="dataRoom" [type]='0' [data]="rooms" (onChoose)="setData($event, 0)"></app-dropdown-list>
+        </div>
+        <div class="form-group">
+        <label >Kierunek</label>
+        <app-dropdown-list [classesUpdateData]="dataMajor" [type]='0' [data]="majors" (onChoose)="setData($event, 1)"></app-dropdown-list>
+        </div>
+        <div class="form-group">
+        <label  class="form-label">Prowadzący</label>
+        <app-dropdown-list [classesUpdateData]="dataTeacher" [type]='0' [data]="teachers" (onChoose)="setData($event, 3)"></app-dropdown-list>
+        </div>
+        <div class="form-group">
+        <label  class="form-label">Przedmiot</label>
+        <app-dropdown-list [classesUpdateData]="dataSubject" [type]='0' [data]="subjects" (onChoose)="setData($event, 2)"></app-dropdown-list>
+        
+        </div>
+    </div>
+</div>
+</div></div>
+

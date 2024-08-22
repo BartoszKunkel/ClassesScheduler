@@ -1,0 +1,10 @@
+<app-huge-dropdown [label]="'Dodaj kierunek'">
+    <app-major-add-form/>
+</app-huge-dropdown>
+
+<app-table (currentActionID)="this.actionID = $event" [tableConfig]="tableConfig"></app-table>
+
+<app-modal [headerLabel]="'Usunięcie kierunku'" [modalName]="'delete_major'" [rightButton]="modalRightButton"
+           [size]="'xs'">
+    <p>Jesteś pewien, ze chcesz usunąć ten kierunek?</p>
+</app-modal>

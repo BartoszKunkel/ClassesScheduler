@@ -1,0 +1,32 @@
+<div class="controls">
+    <div class="form-group">
+    <label class="form-label">Wybierz datę</label>
+        <app-datepicker (dateSelect)="date = $event" (dateSelect)="getRooms()"></app-datepicker>
+    </div>
+    
+    <div class="form-group">
+    <label  class="form-label">Godzina rozpoczęcia zajęć</label>
+    <app-dropdown-list [type]="0" (onChoose)="s_time = $event" (onChoose)="getRooms()" [data]="hours"></app-dropdown-list>
+    </div>
+
+    <div class="form-group">
+    <label  class="form-label">Godzina zakończenia</label>
+    <app-dropdown-list [type]="0" (onChoose)="e_time = $event" (onChoose)="getRooms()" [data]="hours"></app-dropdown-list>
+    </div>
+
+    
+    <app-classes-add-dropdown></app-classes-add-dropdown>
+    <div class="form-group">
+    <label  class="form-label">Interwał</label>
+
+    <app-dropdown-list [type]="0" (onChoose)="ammount = $event" [data]="ammount_table"></app-dropdown-list>
+    </div>
+    <div class="alert">
+        <app-alert #alertRef></app-alert>
+    </div>
+
+    <div class="buttons">
+        <!-- <button (click)="testEndpoint()" class="btn btn-secondary">Test Rooms Filtering</button> -->
+        <button (click)="submit()" class="btn btn-primary" type="button">Dodaj</button>
+    </div>
+</div>

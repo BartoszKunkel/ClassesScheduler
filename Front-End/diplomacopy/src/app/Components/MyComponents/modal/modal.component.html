@@ -1,0 +1,21 @@
+<div class="modal-overlay" [ngClass]="{'opened': modalOpened$ | async, 'closed': !(modalOpened$ | async)}"></div>
+<div class="modal" [ngStyle]="getModalSize()" [ngClass]="{'opened': modalOpened$ | async, 'closed': !(modalOpened$ | async)}">
+  <div class="modal-header">
+    <h3>{{ headerLabel }}</h3>
+    <button class="close-btn" (click)="closeModal()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+  <div class="modal-content">
+    <ng-content></ng-content>
+  </div>
+  <div class="modal-footer">
+    <button class="btn  btn-outline-danger modal-button left-button" (click)="leftButton.action()">{{ leftButton.label }}</button>
+    <div class="right-buttons" *ngIf="rightButtons">
+      <button class="btn btn-outline-primary modal-button" *ngFor="let button of rightButtons; let i = index; trackBy: trackByFn" (click)="button.action()">{{ button.label }}</button>
+    </div>
+    <button class="btn btn-primary modal-button right-button" (click)="rightButton.action()">{{ rightButton.label }}</button>
+  </div>
+</div>
+
+

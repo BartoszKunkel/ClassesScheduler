@@ -1,0 +1,58 @@
+<aside #sidenav [class.open]="(isOpen$ | async) && (isLoggedIn$ | async)" class="sidenav">
+    <nav class="sidenav__nav">
+        <div class="profile">
+            <img alt="Profile" class="image"
+                 height="100"
+                 loading="lazy"
+                 ngSrc="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
+                 width="100">
+            <h5 [ngbTooltip]="email" class="email" placement="bottom">
+                {{ email }}</h5>
+        </div>
+
+        <div class="lists">
+            <ul class="items">
+                <li [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/kalendarz'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Kalendarz</span>
+                </li>
+                <li  [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/kierunki'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-list-task"></i>
+                    <span>Kierunki</span>
+                </li>
+                <li  [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/pokoje'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-list-task"></i>
+                    <span>Pokoje</span>
+                </li>
+                 <li  [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/przedmioty'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-list-task"></i>
+                    <span>Przedmioty</span>
+                </li>
+                 <li  [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/prowadzacy'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-list-task"></i>
+                    <span>Prowadzący</span>
+                </li>
+                <li  [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/zajecia'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-list-task"></i>
+                    <span>Zajęcia</span>
+                </li>
+                <li  [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/zajeciaokresowe'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-list-task"></i>
+                    <span>Zajęcia okresowe</span>
+                </li>
+                <li  [routerLinkActiveOptions]="{exact: false}" [routerLink]="'/rejestracja'" class="item"
+                    routerLinkActive="active">
+                    <i class="bi bi-list-task"></i>
+                    <span>Rejestracja</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</aside>

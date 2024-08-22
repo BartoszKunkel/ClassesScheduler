@@ -1,0 +1,12 @@
+@import './colors';
+
+//Scrollbar override
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: $gray300;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray700;
+}

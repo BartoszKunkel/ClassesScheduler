@@ -1,0 +1,56 @@
+@import './colors';
+
+td {
+  border-left: 1px solid $gray500;
+
+  &:last-of-type {
+    border-right: 1px solid $gray500;
+  }
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: #fafafa;
+}
+
+th {
+  border-left: 1px solid $gray500;
+  border-top: 1px solid $gray500;
+
+  &:last-of-type {
+    border-right: 1px solid $gray500;
+  }
+}
+
+tr {
+  border-color: $gray500;
+}
+
+.dropdown-toggle {
+  &::after {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  border-color: $gray500;
+  border-radius: 0;
+
+  .dropdown-divider {
+    background: $gray500;
+  }
+
+  .dropdown-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: $gray200;
+}
+
+button:focus:not(:focus-visible) {
+  color: $gray900;
+}

@@ -1,0 +1,75 @@
+@import './colors';
+
+.cal-week-view .cal-time-events {
+  border-color: $gray500;
+}
+
+.cal-week-view {
+  border-top: 1px solid $gray500;
+}
+
+.cal-week-view .cal-hour:not(:last-child) .cal-hour-segment, .cal-week-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
+  border-color: $gray500;
+}
+
+.cal-month-view .cal-day-cell:not(:last-child) {
+  border-right-color: $gray500;
+}
+
+.cal-month-view .cal-days {
+  border-color: $gray500;
+}
+
+.cal-month-view .cal-days .cal-cell-row {
+  border-bottom-color: $gray500;
+}
+
+.cal-week-view .cal-day-headers span {
+  opacity: 0.7;
+}
+
+.cal-month-view .cal-day-number {
+  opacity: 0.7;
+}
+
+.cal-month-view .cal-day-cell.cal-out-month .cal-day-number {
+  opacity: 0.3;
+}
+
+.cal-month-view .cal-cell-row {
+  background: transparent;
+}
+
+.cal-week-view .cal-day-headers {
+  border-color: $gray500;
+}
+
+.cal-week-view .cal-day-headers .cal-header:not(:last-child) {
+  border-color: $gray500;
+}
+
+.cal-week-view .cal-day-column {
+  border-left-color: $gray500;
+}
+
+.cal-month-view .cal-header .cal-cell {
+  border-top: 1px solid $gray500;
+  border-left: 1px solid $gray500;
+
+  &:last-of-type {
+    border-right: 1px solid $gray500;
+  }
+}
+
+
+span.cal-event-title {
+  white-space: break-spaces;
+  font-size: 14px;
+  font-style: bold, italic;
+  
+}
+.cal-week-view .cal-time-events .cal-event {
+  line-height: 15px;
+  text-align: center;
+  
+}

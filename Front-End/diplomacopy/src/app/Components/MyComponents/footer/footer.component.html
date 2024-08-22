@@ -1,0 +1,10 @@
+<footer class="footer">
+  <p>Footer {{ currentYear }}</p>
+
+  <button (click)="toggleFooter()">
+    <i *ngIf="!isOpen" class="bi bi-arrow-up-circle"></i>
+    <i *ngIf="isOpen" class="bi bi-arrow-down-circle"></i>
+  </button>
+
+  <div [ngClass]="{'show': isOpen, 'hide': !isOpen}" class="footer__list"></div>
+</footer>

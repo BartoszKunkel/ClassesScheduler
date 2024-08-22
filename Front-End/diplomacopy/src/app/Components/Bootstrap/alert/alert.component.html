@@ -1,0 +1,21 @@
+<ng-container>
+    <ngb-alert #selfClosingAlert (closed)="successMessage = ''" *ngIf="successMessage" [dismissible]="true"
+               type="success">
+        {{ successMessage }}
+    </ngb-alert>
+
+    <ngb-alert #selfClosingWarningAlert (closed)="warningMessage = ''" *ngIf="warningMessage" [dismissible]="true"
+               type="warning">
+        {{ warningMessage }}
+    </ngb-alert>
+
+    <ngb-alert #selfClosingErrorAlert (closed)="errorMessage = ''" *ngIf="errorMessage" [dismissible]="true"
+               type="danger">
+        {{ errorMessage }}
+    </ngb-alert>
+
+    <ngb-alert #staticAlert (closed)="staticErrorMessage = ''" *ngIf="staticErrorMessage" [dismissible]="true"
+               type="danger">
+        {{ staticErrorMessage }}
+    </ngb-alert>
+</ng-container>

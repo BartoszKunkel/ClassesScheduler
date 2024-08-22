@@ -1,0 +1,13 @@
+<div class="dropdown">
+    <h3 class="dropdown__label">{{ label }}</h3>
+    <div class="dropdown__buttons">
+        <button (click)="toggleOpen()" class="arrow-btn">
+            <i *ngIf="!isOpen" class="bi bi-chevron-down"></i>
+            <i *ngIf="isOpen" class="bi bi-chevron-up"></i>
+        </button>
+    </div>
+
+    <div [ngClass]="{'show': isOpen, 'hide': !isOpen}" class="dropdown__list">
+        <ng-content></ng-content>
+    </div>
+</div>

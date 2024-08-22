@@ -1,0 +1,67 @@
+@import './colors';
+
+.open-sans-23423432553464 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  position: fixed;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  background-color: $gray100;
+}
+
+* {
+  border-radius: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+input {
+  border-radius: 0;
+  height: 50px;
+}
+
+.form-control {
+  padding: 12px;
+  height: 50px;
+  border-color: $gray500;
+  border-radius: 0;
+
+  &:focus {
+    border-color: #0d6efd;
+    box-shadow: unset;
+  }
+
+  &.ng-invalid.ng-touched {
+    border-color: #ad2121;
+  }
+}

@@ -1,0 +1,52 @@
+<form [formGroup]="majorsForm" class="form">
+    <div class="form__group">
+        <form class="form__group--control">
+            <label class="form-label" for="study_mode">Rodzaj studiów</label>
+            <app-radio [emitter]='0' [lowerRadio]="radioStudy_mode[1]" [upperRadio]="radioStudy_mode[0]" id="study_mode"
+            />
+        </form>
+
+        <form class="form__group--control">
+            <label class="form-label" for="lvl_degree">Poziom studiów</label>
+            <app-radio [lowerRadio]="radioLvl_degree[1]" [upperRadio]="radioLvl_degree[0]" id="lvl_degree"
+            />
+        </form>
+    </div>
+
+    <div class="form__group">
+        <div class="form__group--control">
+            <label class="form-label" for="name">Nazwa</label>
+            <input class="form-control" formControlName="name" id="name"
+                   ngbTooltip="Podaj znak lub łańcuch znaków określający nazwe kierunku. Na przykład Informatyka">
+        </div>
+
+        <div class="form__group--control">
+            <label class="form-label" for="specialization">Specializacja</label>
+            <input class="form-control" formControlName="specialization" id="specialization"
+                   ngbTooltip="Podaj znak lub łańcuch znaków określający nazwe specjalizacji. Na przykład AIiM lub Aplikacje internetowe i Mobilne">
+        </div>
+
+        <div class="form__group--control">
+            <label class="form-label" for="practice_group">Grupa ćwiczeniowa</label>
+            <input class="form-control" formControlName="practice_group" id="practice_group"
+                   ngbTooltip="Podaj znak lub łanców znaków określający grupę ćwiczeniową. Na przykład Ogólna, grupa pierwsza, gr1">
+        </div>
+
+        <div class="form__group--control">
+            <label class="form-label" for="lab_group">Grupa Laboratoryjna</label>
+            <input class="form-control" formControlName="lab_group" id="lab_group"
+                   ngbTooltip="Podaj znak lub łanców znaków określający grupę laboratoryjna. Na przykład grupa pierwsza, gr1">
+        </div>
+
+        <div class="form__group--control">
+            <app-dropdown-list (onChoose)="getSemester($event)" [data]="semester_table" [label]="'Semestr'"
+            ></app-dropdown-list>
+        </div>
+    </div>
+
+    <div class="alert">
+        <app-alert #alertRef></app-alert>
+    </div>
+
+    <button (click)="submit()" class="btn btn-primary" type="button">Dodaj</button>
+</form>

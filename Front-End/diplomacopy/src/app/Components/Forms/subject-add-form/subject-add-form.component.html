@@ -1,0 +1,11 @@
+
+<form [formGroup]="subjectsForm">
+    <div class="mb-3">
+        <label  class="form-label">Nazwa przedmiotu</label>
+        <input  class="form-control" formControlName="name" ngbTooltip="Podaj znak lub łańcuch znaków określający nazwę przedmiotu. Na przykłąd Informatyka." >
+      <button (click)="submit()" type="button" class="btn btn-primary">Wyślij</button>
+      </div>
+
+      
+</form>
+<app-alert #alertRef></app-alert>

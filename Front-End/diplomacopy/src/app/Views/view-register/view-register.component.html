@@ -1,0 +1,10 @@
+<app-huge-dropdown [label]="'Dodaj użytkownika'">
+    <app-registration-form></app-registration-form>
+</app-huge-dropdown>
+
+<app-table (currentActionID)="this.actionID = $event" [tableConfig]="tableConfig"></app-table>
+
+<app-modal [headerLabel]="'Usunięcie użytkownika'" [modalName]="'delete_user'" [rightButton]="modalRightButton"
+           [size]="'xs'">
+    <p>Jesteś pewien, ze chcesz usunąć tego użytkownika z bazy danych?</p>
+</app-modal>

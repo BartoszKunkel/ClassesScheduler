@@ -1,0 +1,10 @@
+<app-huge-dropdown [label]="'Dodaj pokój'">
+    <app-rooms-add-form/>
+</app-huge-dropdown>
+
+<app-table (currentActionID)="this.actionID = $event" [tableConfig]="tableConfig"></app-table>
+
+<app-modal [headerLabel]="'Usunięcie pokoju'" [modalName]="'delete_room'" [rightButton]="modalRightButton"
+           [size]="'xs'">
+    <p>Jesteś pewien, ze chcesz usunąć ten pokój?</p>
+</app-modal>

@@ -1,0 +1,18 @@
+<div class="auth-container">
+    <div class="auth">
+        <form [formGroup]="authForm" class="auth__form">
+            <div class="auth__form__control">
+                <label class="form-label" for="login">Login</label>
+                <input class="form-control" formControlName="login" id="login" type="login">
+            </div>
+            <div class="auth__form__control">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" formControlName="password" id="password" type="password">
+            </div>
+
+            <button (click)="submit()" [disabled]="authForm.invalid" class="btn btn-primary" type="button">Login
+            </button>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,10 @@
+<app-huge-dropdown [label]="'Dodaj prowadzącego'">
+    <app-teacher-add-form/>
+</app-huge-dropdown>
+
+<app-table (currentActionID)="this.actionID = $event" [tableConfig]="tableConfig"></app-table>
+
+<app-modal [headerLabel]="'Usunięcie prowadzącego'" [modalName]="'delete_teacher'" [rightButton]="modalRightButton"
+           [size]="'xs'">
+    <p>Jesteś pewien, ze chcesz usunąć prowadzącego z bazy danych?</p>
+</app-modal>

@@ -1,0 +1,13 @@
+<app-topbar/>
+
+<div class="content">
+    <app-sidenav (sidenavWidth)="sidenavWidth = $event"/>
+
+    <div [style.margin-left.px]="(isDesktop() | async) ? sidenavWidth : 0" class="outlet">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer/>
+</div>
+
+<app-screen-loader *ngIf="isLoading$ | async"/>
+<app-toast/>

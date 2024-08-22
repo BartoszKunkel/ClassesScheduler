@@ -1,0 +1,20 @@
+<header class="topbar">
+    <div class="brand">
+        <a>Logo</a>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <button (click)="toggleSidenav()" *ngIf="isLoggedIn$ | async">
+                    <i *ngIf="!(isOpen$ | async)" class="bi bi-list"></i>
+                    <i *ngIf="isOpen$ | async" class="bi bi-x"></i>
+                </button>
+            </li>
+            <li>
+                <button (click)="logout()" *ngIf="isLoggedIn$ | async">
+                    <i class="bi bi-box-arrow-right"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>

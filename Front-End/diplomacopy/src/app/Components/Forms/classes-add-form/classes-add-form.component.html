@@ -1,0 +1,30 @@
+<form  class="classesForm">
+  
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">MajorId</label>
+        <input  class="form-control" formControlName="majorid">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">SubjectId</label>
+        <input  class="form-control" formControlName="subjectid">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">TeacherId</label>
+        <input  class="form-control" formControlName="teacherid">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">RoomId</label>
+        <input  class="form-control" formControlName="roomid">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Start Time</label>
+        <input  class="form-control" formControlName="start_time">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">End Time</label>
+        <input  class="form-control" formControlName="end_time">
+      </div>
+      <button (click)="submit()" type="button" class="btn">Wyślij</button>
+      <button (click)="getClasses()" type="button" class="btn">Pobierz</button>
+
+    </form>

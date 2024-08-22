@@ -1,0 +1,35 @@
+<div *ngIf="tableConfig" class="table-container">
+    <table class="table table-striped">
+        <caption>{{ tableConfig.caption }}</caption>
+        <thead>
+        <tr>
+            <th *ngFor="let header of tableConfig.headers" scope="col">{{ header }}</th>
+            <th *ngIf="tableConfig.actionsColumn" class="action" scope="col"></th>
+        </tr>
+        </thead>
+        <tbody *ngIf="(tableConfig.data$ | async) as data">
+            @for (record of data; track $index) {
+                <tr>
+                    <td *ngFor="let attribute of tableConfig.attributes">{{ record[attribute] }}</td>
+                    <td *ngIf="tableConfig.actionsColumn" class="action">
+                        <div ngbDropdown container="body">
+                            <button ngbDropdownToggle (click)="emit($index)">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </button>
+                            <div ngbDropdownMenu>
+                                <button ngbDropdownItem (click)="tableConfig.onView($index)"><i
+                                        class="bi bi-eye-fill"></i>
+                                    <span>Szczegóły</span></button>
+                                <button ngbDropdownItem (click)="tableConfig.onEdit($index)"><i
+                                        class="bi bi-pencil-fill"></i> <span>Edytuj</span></button>
+                                <div class="dropdown-divider"></div>
+                                <button ngbDropdownItem (click)="tableConfig.onDelete($index)"><i
+                                        class="bi bi-trash3-fill"></i> <span>Usuń</span></button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

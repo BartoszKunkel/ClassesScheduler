@@ -1,0 +1,18 @@
+<form [formGroup]="roomsForm">
+    <div class="mb-3">
+        <label  class="form-label">Budynek</label>
+        <input  class="form-control" formControlName="building" ngbTooltip="Podaj znak lub łańcuch znaków określający budynek w którym znajduje się sala Na przykład B lub BE." >
+
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Numer sali</label>
+        <input  class="form-control" formControlName="numer" ngbTooltip='Podaj cyfrę lub liczbę która określa numer sali. Na przykład 1 lub 112.'>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Sufiks</label>
+        <input  class="form-control" formControlName="suffix" ngbTooltip="Podaj znak lub łanców znaków jeżeli sala posiada suffix. Na przykład a gdy sala to 112a.">
+      </div>
+    
+      <button (click)="submit()" type="button" class="btn btn-primary">Wyślij</button>
+      <app-alert #alertRef></app-alert>
+</form>
