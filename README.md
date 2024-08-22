@@ -27,18 +27,16 @@ Instructions to launch the application:
 
 
 ## Login panel
-![Screenshot of login panel](https://imgur.com/GYAOH7A)
+![Screenshot of login panel](https://i.imgur.com/GYAOH7A.png)
 
 ## Main page
-![Screenshot of main page](https://imgur.com/TRdYTpv)
+![Screenshot of main page](https://i.imgur.com/TRdYTpv.png)
 
 ## Main page with schedule
-![Screenshot of main page after filtering desire schedule](https://imgur.com/seSWmfm)
+![Screenshot of main page after filtering desire schedule](https://i.imgur.com/seSWmfm.png)
 
 ## Menu
-![Screenshot of slide bar menu](https://imgur.com/D2kbc4b)
+![Screenshot of slide bar menu](https://i.imgur.com/D2kbc4b.png)
 
 ## Data editing page
-![Screenshot of data editing page with some of records](https://imgur.com/kWf5IhK)
-
-"# ClassesScheduler" 
+![Screenshot of data editing page with some of records](https://i.imgur.com/kWf5IhK.png)
